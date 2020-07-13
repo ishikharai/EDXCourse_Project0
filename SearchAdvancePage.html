@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+			<link rel="stylesheet" href="CoustomMainPage.css">
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css" >
+			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+    		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+			<script src= "https://code.jquery.com/jquery-3.5.1.js"> </script>
+	</head>
+	<body>
+		<div class="container-flucid SrchTgl">
+			<div class="row" >
+				<div class="col-sm-12 ">
+			 		<nav class="navbar navbar-expand-sm navbar-light"  >
+			 			<a class="navbar-brand text-dark " href="index.html?name=abc"></a>
+			 			<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarmenu">
+			 			   <span class="navbar-toggler-icon"></span>
+			 			</button>
+			 			<div class="collapse navbar-collapse " id="navbarmenu" >
+				 			<ul class=" nav navbar-nav ml-auto SrchTgl hoverbgcolor" >
+								<li class="active nav-item "><a href="Index.html" class="nav-link text-primary">Text Search</a></li>
+								<li class="nav-item "><a href="SearchImg.html" class="nav-link text-primary">Images Search</a></li>
+								<li class="nav-item"><a href="SearchAdvancePage.html" class="nav-link text-primary" >Advance Search</a></li>
+				 			</ul>
+			 			</div>
+			 		</nav>
+			 		<br />
+				</div>
+			</div>
+		</div>
+		<div class="container-flucid " style="background-color:#EAEDED; "  >
+			<div class="row" >
+				<div class="col-sm-12 ">
+			 		<div class="card">
+						<div class="card-header bg-white text-danger h5">
+		    			 		<p>Advance Search</p>
+	 					</div>	
+	 					<br /><br />	
+						<div class="card-body bg-white text-black h6">
+							<div class="form-group form-row">
+							    <label for="staticEmail" class="col-sm-2 offset-sm-1">Find pages with...</label>
+							    <div class="col-sm-2  offset-sm-6 h6 ">
+									To do this in the search box.	
+						   		 </div>
+							</div>	
+							<div class="form-group form-row">
+							    <label for="staticEmail" class="col-sm-2 offset-sm-1">all these words:</label>
+							    <div class="col-sm-5 ">
+							    	<input type="text"  class="form-control" id="advSrchInput0" value="">
+							    </div>
+							    <div class="col-sm-2 h6 offset-sm-1 ">
+									Type the important words: tri-colour rat terrier	
+						   		 </div>
+							</div>	
+							<div class="form-group form-row">
+							    <label for="staticEmail" class="col-sm-2 offset-sm-1">this exact word or phrase:</label>
+							    <div class="col-sm-5 ">
+							    	<input type="text"  class="form-control" id="advSrchInput1" value="">
+							    </div>
+							    <div class="col-sm-2 h6 offset-sm-1">
+							    	Put exact words in quotes: "rat terrier"
+							    </div>
+							</div>	
+							<div class="form-group form-row">
+							    <label for="staticEmail" class="col-sm-2 offset-sm-1">any of these words:</label>
+							    <div class="col-sm-5 ">
+							    	<input type="text"  class="form-control" id="advSrchInput2" value="">
+							    </div>
+							    <div class="col-sm-2 h6 offset-sm-1">
+							    	Type OR between all the words you want: miniature OR standard
+							    </div>
+							</div>	
+							<div class="form-group form-row">
+							    <label for="staticEmail" class="col-sm-2 offset-sm-1">none of these words:</label>
+							    <div class="col-sm-5 ">
+							    	<input type="text"  class="form-control" id="advSrchInput3" value="">
+							    </div>
+							    <div class="col-sm-2 h6 offset-sm-1 ">
+							    	Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"
+							    </div>
+							</div>	
+							<div class="form-row bg-white">
+								<div class="col-sm-3  offset-sm-7 " >
+									<button type="Button" id="srchTextBtn" name="srchTextBtn"  class="btn btn-primary text-light "  >Advance Search</button>
+		 			 			</div>
+		    				</div>
+						</div>
+			 		</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$("#srchTextBtn").click(function(){
+  				 if( ( ($("#advSrchInput0").val()=="") &&  ($("#advSrchInput1").val()=="") &&  ($("#advSrchInput2").val()=="") &&  ($("#advSrchInput3").val()!="")) ||
+  					 ( ($("#advSrchInput0").val()!="") &&  ($("#advSrchInput1").val()=="") &&  ($("#advSrchInput2").val()=="") &&  ($("#advSrchInput3").val()!="")) ||
+  					 ( ($("#advSrchInput0").val()=="") &&  ($("#advSrchInput1").val()!="") &&  ($("#advSrchInput2").val()=="") &&  ($("#advSrchInput3").val()!="")) ||
+  					 ( ($("#advSrchInput0").val()=="") &&  ($("#advSrchInput1").val()=="") &&  ($("#advSrchInput2").val()!="") &&  ($("#advSrchInput3").val()!="")) ||
+  					 ( ($("#advSrchInput0").val()!="") &&  ($("#advSrchInput1").val()!="") &&  ($("#advSrchInput2").val()=="") &&  ($("#advSrchInput3").val()!="")) ||
+  					 ( ($("#advSrchInput0").val()!="") &&  ($("#advSrchInput1").val()=="") &&  ($("#advSrchInput2").val()!="") &&  ($("#advSrchInput3").val()!="")) ||
+  					 ( ($("#advSrchInput0").val()=="") &&  ($("#advSrchInput1").val()!="") &&  ($("#advSrchInput2").val()!="") &&  ($("#advSrchInput3").val()!="")) ||
+  					 ( ($("#advSrchInput0").val()!="") &&  ($("#advSrchInput1").val()!="") &&  ($("#advSrchInput2").val()!="") &&  ($("#advSrchInput3").val()!=""))    ){
+						window.location.href = "https://www.google.com/search?q="+ $("#advSrchInput0").val() +" &as_epq=" + $("#advSrchInput1").val() +"&as_oq=" +  $("#advSrchInput2").val()+	"&as_eq=" +  $("#advSrchInput3").val();
+				} else if( ( ($("#advSrchInput0").val()!="") &&  ($("#advSrchInput1").val()!="") &&  ($("#advSrchInput2").val()!="")) ||
+						  ( ($("#advSrchInput0").val()!="") &&  ($("#advSrchInput1").val()=="") &&  ($("#advSrchInput2").val()!="")) ||
+						  ( ($("#advSrchInput0").val()=="") &&  ($("#advSrchInput1").val()!="") &&  ($("#advSrchInput2").val()!="")) || 
+						  ( ($("#advSrchInput0").val()=="") &&  ($("#advSrchInput1").val()=="") &&  ($("#advSrchInput2").val()!=""))   ){
+						window.location.href = "https://www.google.com/search?q="+ $("#advSrchInput0").val() +" &as_epq=" + $("#advSrchInput1").val() +"&as_oq=" +  $("#advSrchInput2").val();
+				} else if( (  ($("#advSrchInput0").val()!="") &&  ($("#advSrchInput1").val()!="")) || (  ($("#advSrchInput0").val()=="") &&  ($("#advSrchInput1").val()!="")) ) {
+				    	window.location.href = "https://www.google.com/search?q="+ $("#advSrchInput0").val() +" &as_epq=" + $("#advSrchInput1").val();
+			    } else{
+						window.location.href = "https://google.com/search?q=" + $("#advSrchInput0").val() ;
+ 				}
+ 			});
+		});
+	</script>		
+	</body>
+</html>

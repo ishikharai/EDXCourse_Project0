@@ -1,0 +1,33 @@
+@charset "ISO-8859-1";
+ .InputBoxCircle {
+  border-radius: 12px;
+  background: white;
+  padding: 20px;
+}
+#example2 {
+  border: 2px solid blue;
+  padding: 12px;
+  border-radius: 50px 50px;
+}
+.example1 {
+  border: 0px ;
+  padding-bottom:0px;
+  padding-top:0px;
+  border-radius: 50px 50px;
+  background-color:white;
+}
+ #SrchIcon {
+  border: 0px ;
+  padding-bottom:0px;
+  padding-top:0px;
+  border-radius: 50px 50px;
+  background-color:white;
+}
+#advSrchInput{
+	box-shadow:0 0 5px 1px blue;
+}
+.SrchTgl{
+	background-color: white;
+	font-style:italic;
+}
+

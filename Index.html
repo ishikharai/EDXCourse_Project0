@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+			<link rel="stylesheet" href="CoustomMainPage.css">
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css" >
+			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+    		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+			<script src= "https://code.jquery.com/jquery-3.5.1.js"> </script>
+	</head>
+	<body>
+		<div class="container-flucid SrchTgl" >
+			<div class="row" >
+				<div class="col-sm-12 ">
+			 		<nav class="navbar navbar-expand-sm navbar-light"  >
+			 			<a class="navbar-brand text-dark " href="index.html?name=abc"></a>
+			 			<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarmenu">
+			 			   <span class="navbar-toggler-icon"></span>
+			 			</button>
+			 			<div class="collapse navbar-collapse " id="navbarmenu" >
+				 			<ul class=" nav navbar-nav ml-auto SrchTgl hoverbgcolor" >
+								<li class="active nav-item "><a href="Index.html" class="nav-link text-primary">Text Search</a></li>
+								<li class="nav-item "><a href="SearchImg.html" class="nav-link text-primary">Images Search</a></li>
+								<li class="nav-item"><a href="SearchAdvancePage.html" class="nav-link text-primary" >Advance Search</a></li>
+				 			</ul>
+			 			</div>
+			 		</nav>
+			 		<br />
+				</div>
+			</div>
+		</div>
+		<div class="container-flucid " >
+			<div class="form-row">
+				<div class="col-sm-6 offset-sm-4">
+					<img src="https://media.giphy.com/media/MRDICUC5enJy8/giphy.gif" alt="Responsive image"  width=550px align="middle">
+				</div>
+			</div>		
+		</div>
+       <br />
+		<div class="container-flucid ">
+			<form class = "search " action ="http://www.google.com/search" id="gsf" method="get" name="GTSP" role="search"  onSubmit="knGsitesearch(this)">
+				<div class="form-row">
+			    	<div class="col-sm-4 offset-sm-4">
+				      	<div class="input-group " id ="example2"  Style="padding-bottom:0px;padding-top:0px">
+									 <input name="q" type="hidden" /> 
+				        	<input type="text"  name ="srchText" id ="srchText" class="form-control form-control-plaintext" >
+				        	<div class="input-group-prepend example1" >
+				          		<div class="input-group-text form-control-plaintext" id="SrchIcon" >
+				          			<button type="submit"  id="srchTextBtn1"  class="example1"> <img src="https://img.icons8.com/material-outlined/24/000000/search.png" /></button>
+								</div>
+				        	</div>
+				      	</div>
+ 					</div>
+				</div>	
+				<br />
+				<div class="form-row">
+					<div class="col-sm-4  offset-sm-5" >
+						<button type="Button" id="srchTextBtn" name="srchTextBtn"  class="btn btn-secondary text-light "  >Google Search </button>
+						<button type="submit" id= "SrchluckBtn" class="btn bg-secondary text-light " value="">I'm Feeling Lucky</button>
+		 			 </div>
+		    	</div>
+			</form>
+		</div>
+		<br />
+		<script type="text/javascript">
+  			var domainroot="www.google.com/search";
+			function knGsitesearch(curobj){ 
+			  curobj.q.value="https://"+domainroot+"?q= "+curobj.srchText.value ;
+			  curobj.q.value=curobj.srchText.value ;
+			};
+ 
+		$(document).ready(function(){
+			$("#srchTextBtn").click(function(){
+				window.location.href = "https://google.com/search?q=" + $("#srchText").val() ;
+				
+			});
+
+			$("#srchTextBtn1").click(function(){
+				window.location.href = "https://google.com/search?q=" + $("#srchText").val() ;
+			});
+			
+		});
+	</script>
+	</body>
+</html>
